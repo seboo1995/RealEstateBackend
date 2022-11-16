@@ -65,4 +65,3 @@ def clean_reklama_5_data():
     return df
 
 
-clean_reklama_5_data()

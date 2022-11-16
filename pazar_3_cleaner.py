@@ -1,5 +1,4 @@
 import pandas as pd
-import psycopg2
 import re
 import sqlalchemy
 from dotenv import dotenv_values
