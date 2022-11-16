@@ -27,7 +27,6 @@ azureml==0.2.7
 azureml-core==1.39.0.post1
 azureml-dataprep==3.0.1
 azureml-dataprep-native==38.0.0
-azureml-dataprep-rslex==2.4.1
 azureml-dataset-runtime==1.40.0
 Babel==2.9.1
 backcall==0.2.0
