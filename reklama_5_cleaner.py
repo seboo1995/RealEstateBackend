@@ -63,3 +63,6 @@ def clean_reklama_5_data():
     df['price_calc'] = df.apply(calculate_price, axis=1)
     df['location'] = df.location.str.split('/').apply(lambda x: x[0])
     return df
+
+
+clean_reklama_5_data()
