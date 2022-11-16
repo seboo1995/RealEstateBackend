@@ -290,7 +290,6 @@ Protego==0.2.1
 proto-plus==1.19.8
 protobuf==3.19.1
 psutil==5.5.1
-psycopg2==2.9.3
 psycopg2-binary==2.9.3
 ptyprocess==0.7.0
 pyarrow==3.0.0
