@@ -2,9 +2,11 @@ import pandas as pd
 import re
 import sqlalchemy
 from dotenv import dotenv_values
+import os
 config = dotenv_values(".env")
 dsn = config.get('dsn')
 print(dsn)
+dsn = os.getenv('dsn')
 
 
 def create_engine():

@@ -1,11 +1,12 @@
 from pymongo import MongoClient
 import pandas as pd
 from dotenv import dotenv_values
-
+import os
 
 config = dotenv_values(".env")
 conn_mongo = config.get('conn_mongo')
 print(conn_mongo)
+conn_mongo = os.getenv('conn_mongo')
 
 
 def price_is_mkd(price):
