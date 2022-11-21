@@ -21,6 +21,14 @@ async def reklama_5_data():
     parsed = json.loads(res)
     return parsed
 
+@app.get('/pazar_3_data_by_location')
+async def pazar3_data_by_location():
+    pazar_data = clean_data()
+    res_df = pazar_data.groupby('location').price.mean()
+    return res_df
+
+
+
 @app.get('/')
 def say_hello():
     return {

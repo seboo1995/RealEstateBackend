@@ -22,15 +22,10 @@ def read_from_database():
 def get_location_from_title(row):
     res = [ele for ele in list_with_mun if (
         ele.lower() in row.title.lower().strip())]
-    print(row.title)
-    print(res)
-    print('----------------------------')
     if len(res) != 0:
         return (res[0].title())
     else:
         return row.location
-        print('Nothing')
-    print('-----------------------------------')
 
 
 def check_area_in_title(title):
@@ -107,4 +102,3 @@ def clean_data():
     return df
 
 
-clean_data()
