@@ -3,10 +3,9 @@ import pandas as pd
 from dotenv import dotenv_values
 import os
 
-config = dotenv_values(".env")
-conn_mongo = config.get('conn_mongo')
-print(conn_mongo)
-conn_mongo = os.getenv('conn_mongo')
+#config = dotenv_values(".env")
+conn_mongo =os.environ.get("conn_mongo")
+#conn_mongo = os.getenv('conn_mongo')
 
 
 def price_is_mkd(price):
@@ -61,8 +60,6 @@ def clean_reklama_5_data():
     df.price = df.price.astype(int)
     df = df[df.price > 500]
     df.area = df.area.apply(clean_area)
-    df['price_calc'] = df.apply(calculate_price, axis=1)
+    df['price'] = df.apply(calculate_price, axis=1)
     df['location'] = df.location.str.split('/').apply(lambda x: x[0])
     return df
-
-

@@ -20,3 +20,9 @@ async def reklama_5_data():
     res = pazar_data.to_json(orient='records')
     parsed = json.loads(res)
     return parsed
+
+@app.get('/')
+def say_hello():
+    return {
+        'message':'Hello World'
+    }
